@@ -6,7 +6,7 @@ const OPENAI_MODEL = "gpt-4-1106-preview";
 const MAX_TOKENS = 128_000;
 
 export async function handler(event) {
-  const { url } = event.queryParameters;
+  const { url } = event.queryStringParameters;
   const html = await getUrlContent(url);
   const text = convert(html, { wordwrap: null });
   const data = await extractEntitiesWithAffiliations(text);
