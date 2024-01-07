@@ -1,4 +1,3 @@
-import "dotenv/config";
 import { convert } from "html-to-text";
 import OpenAI from "openai";
 import { encodingForModel } from "js-tiktoken";
